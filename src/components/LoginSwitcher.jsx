@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StudentLoginForm from './StudentLoginForm';
+import StudentLoginForm from './StudentloginForm';
 import AdminLoginForm from './AdminLoginForm';
 import AdminAssignmentForm from './AdminAssignmentForm';
 import StudentAssignmentForm from './StudentAssignmentForm';
