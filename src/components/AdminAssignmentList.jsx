@@ -11,11 +11,11 @@ function AdminAssignmentList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const assignmentRes = await axios.get('http://localhost:5000/api/assignments');
+        const assignmentRes = await axios.get('https://studentassignmentportal.onrender.com/api/assignments');
         setAssignments(assignmentRes.data);
 
         // Fetch all submissions
-        const submissionsRes = await axios.get('http://localhost:5000/api/submissions');
+        const submissionsRes = await axios.get('https://studentassignmentportal.onrender.com/api/submissions');
         // Group submissions by assignmentId
         const mapped = {};
         for (const sub of submissionsRes.data) {
