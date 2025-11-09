@@ -16,8 +16,8 @@ function AdminAssignmentForm() {
   const fetchData = async () => {
     try {
       const [assignRes, submitRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/assignments'),
-        axios.get('http://localhost:5000/api/submissions'),
+        axios.get('https://studentassignmentbackend.onrender.com/api/assignments');
+        axios.get('https://studentassignmentbackend.onrender.com/api/submissions');
       ]);
       setAssignments(assignRes.data);
       setSubmissions(submitRes.data);
