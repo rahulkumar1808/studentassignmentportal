@@ -14,7 +14,7 @@ function AssignmentSubmitPage() {
   useEffect(() => {
     const fetchAssignment = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/assignments/${id}`);
+        const res = await axios.get(`https://studentassignmentportal.onrender.com/api/assignments/${id}`);
         setAssignment(res.data);
       } catch (err) {
         console.error("Error fetching assignment:", err);
@@ -35,7 +35,7 @@ function AssignmentSubmitPage() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/submissions", {
+      await axios.post("https://studentassignmentportal.onrender.com/api/submissions", {
         assignmentId: id,
         rollNo,
         name,
