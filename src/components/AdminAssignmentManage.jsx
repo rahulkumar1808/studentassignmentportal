@@ -17,7 +17,7 @@ function AdminAssignmentManage() {
 
   const fetchAssignments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/assignments");
+      const res = await axios.get("https://studentassignmentportal.onrender.com/api/assignments");
       setAssignments(res.data);
     } catch (err) {
       alert("Error fetching assignments!");
@@ -47,7 +47,7 @@ function AdminAssignmentManage() {
   const handleEditSave = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/assignments/${editAssignment._id}`, {
+      await axios.put(`https://studentassignmentportal.onrender.com/${editAssignment._id}`, {
         title: editTitle,
         description: editDescription,
       });
