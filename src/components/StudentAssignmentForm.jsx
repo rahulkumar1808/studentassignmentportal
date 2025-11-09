@@ -20,7 +20,7 @@ function StudentAssignmentForm() {
 
   const fetchAssignments = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/assignments');
+      const res = await axios.get('https://studentassignmentportal.onrender.com/api/assignments');
       setAssignments(res.data);
     } catch (err) {
       console.error('Error fetching assignments:', err);
@@ -29,7 +29,7 @@ function StudentAssignmentForm() {
 
   const fetchSubmissions = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/submissions');
+      const res = await axios.get('https://studentassignmentportal.onrender.com/api/submissions');
       setSubmissions(res.data.filter(sub => sub.rollNo === studentRollNo));
     } catch (err) {
       console.error('Error fetching submissions:', err);
@@ -49,7 +49,7 @@ function StudentAssignmentForm() {
 
   const handleEditSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/submissions/${editingSubmission._id}`, {
+      await axios.put(`https://studentassignmentportal.onrender.com/submissions/${editingSubmission._id}`, {
         ...editingSubmission,
         answer: editAnswer,
       });
